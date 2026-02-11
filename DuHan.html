@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo Tường Lớp 12 - Du Hân</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d3436;
+            --accent: #d63031; /* Màu đỏ đô nhấn nhẹ cho sự quyết tâm */
+            --bg-page: #fdfdfd;
+            --border: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        .bao-tuong {
+            max-width: 800px;
+            width: 100%;
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 50px;
+            position: relative;
+        }
+
+        /* Đồng hồ đếm ngược */
+        .countdown {
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #636e72;
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+            margin: 40px 0 20px 0;
+        }
+
+        /* Thời khóa biểu tối giản */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        th {
+            text-align: left;
+            padding: 15px 10px;
+            border-bottom: 2px solid var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            line-height: 1.8;
+        }
+
+        .quote-box {
+            grid-column: span 2;
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-style: italic;
+            margin: 20px 0;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            transition: 0.3s;
+            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        .btn-contact:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #b2bec3;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 2.5rem; }
+            .bao-tuong { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bao-tuong">
+    <div class="countdown" id="timer">Đang tính toán ngày thi...</div>
+
+    <header>
+        <h1>Du Hân.</h1>
+        <div class="tagline">Kiên định, tĩnh lặng và rực rỡ theo cách riêng.</div>
+    </header>
+
+    <section>
+        <h2>Lịch Học Tập</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Thứ</th>
+                    <th>Sáng (Trường)</th>
+                    <th>Chiều (Tự học)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Thứ 2</td><td>Ngữ Văn, Toán, Lịch Sử</td><td>Ôn tập khối chuyên</td></tr>
+                <tr><td>Thứ 3</td><td>Tin Học, Ngoại Ngữ</td><td>Luyện đề thi thử</td></tr>
+                <tr><td>Thứ 4</td><td>Toán, Ngữ Văn, Địa Lý</td><td>Đọc tài liệu mở rộng</td></tr>
+                <tr><td>Thứ 5</td><td>Ngoại Ngữ, Lịch Sử</td><td>Học nhóm/Trao đổi</td></tr>
+                <tr><td>Thứ 6</td><td>Hóa Học, GD Kinh Tế</td><td>Tổng hợp kiến thức tuần</td></tr>
+                <tr><td>Thứ 7</td><td>Ngữ Văn, Sinh Hoạt</td><td>Nghỉ ngơi & Đam mê</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="info-grid">
+        <div>
+            <h2>Tư duy</h2>
+            <p>Yêu thích sự logic nhưng cũng đầy cảm xúc với văn chương. Du Hân tin rằng sự chuẩn bị kỹ lưỡng là chìa khóa duy nhất của sự tự tin.</p>
+        </div>
+        <div>
+            <h2>Đích đến</h2>
+            <p>Hướng tới các khối ngành Ngôn ngữ hoặc Truyền thông. Mục tiêu là trở thành một phiên bản tốt hơn của chính mình mỗi ngày.</p>
+        </div>
+        <div class="quote-box">
+            "Sự kiên trì sẽ đưa bạn đến những nơi mà tài năng không thể."
+        </div>
+    </section>
+
+    <center>
+        <a href="#" class="btn-contact">KẾT NỐI VỚI DU HÂN</a>
+    </center>
+
+    <footer>
+        DESIGNED FOR DU HAN • CLASS 12 • 2026
+    </footer>
+</div>
+
+<script>
+    // Đếm ngược đến kỳ thi (Giả định 25/06/2026)
+    const examDate = new Date("June 25, 2026 00:00:00").getTime();
+
+    const countdown = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = examDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        document.getElementById("timer").innerHTML = `CÒN ${days} NGÀY ${hours} GIỜ ĐẾN KỲ THI THPTQG`;
+
+        if (distance < 0) {
+            clearInterval(countdown);
+            document.getElementById("timer").innerHTML = "CHÚC BẠN THI TỐT!";
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
